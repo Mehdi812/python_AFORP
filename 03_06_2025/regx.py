@@ -1,4 +1,5 @@
 import re
+import csv
 
 # Expression régulière IPv4
 ipv4_regex = r"^(25[0-5]|2[0-4][0-9]|1\d{2}|[1-9]?\d)(\.(25[0-5]|2[0-4][0-9]|1\d{2}|[1-9]?\d)){3}$"
@@ -23,7 +24,7 @@ ip_addresses = [
     "0.0.0.0"
 ]
 
-# Test des adresses
+
 for ip in ip_addresses:
     if re.match(ipv4_regex, ip):
         print(f"{ip} est une adresse IPv4 valide.")
